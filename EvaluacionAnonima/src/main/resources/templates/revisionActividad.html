@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	  
+	<head th:insert="index::encabezado">
+		
+	</head>
+    
+    <body>
+    
+    	<div th:insert="revisionActividad::navbar"></div>
+   
+       <div class="contenedor">
+	      <h1 style="text-align:center">Respuesta a actividad </h1>
+	      <h3>Datos de la revision de la actividad</h3>
+		      <form action="" method="POST">
+			      Selecciona la actividad a responder<select name="cursos">
+			          <option>Matematicas</option>
+			          <option>Lenguaje</option>
+			          <option>Quimica</option>
+			        </select><br><br>
+			      <input type="text" placeholder="URL"><br><br>
+			      <input type="text" placeholder="URL"><br><br>
+			      <input type="text" placeholder="Puntaje final" required autofocus><br><br>
+			      <button class="btn btn-lg btn-primary btn-block" type="submit" style="text-align:center">Enviar</button>
+		      </form>
+       </div>
+   
+    <th:block th:insert="index::script">
+    		
+	</body>
+</html>
