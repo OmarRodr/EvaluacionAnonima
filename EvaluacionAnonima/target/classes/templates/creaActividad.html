@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	  
+	<head th:insert="index::encabezado">
+		
+	</head>
+    
+    <body>
+    
+    	<div th:insert="inicioAdmi::navbar"></div>
+   
+        <div class="contenedor">
+      		<h1 style="text-align:center">Creacion de actividad</h1><br>
+     		<h3>Crear actividad a evaluar</h3>
+      		<form action="" method="POST">
+      			Selecciona curso o taller <select name="cursos">
+          			<option>Matematicas</option>
+          			<option>Lenguaje</option>
+          			<option>Quimica</option>
+       			</select><br><br>
+     			<input type="text" placeholder="Descripcion corta de la actividad" required autofocus><br><br>
+      			Describe la actividad a evaluar a detalle, objetivos<br><textarea name="descripcion larga"></textarea><br><br>
+      			Describe los puntos a evaluar<br><textarea name="descripcion evaluacion"></textarea><br><br>
+      			<input type="text" placeholder="Puntaje numerico" required autofocus><br><br>
+      			<button class="btn btn-lg btn-primary btn-block" type="submit" style="text-align:center">Enviar</button>
+      	    </form>
+        </div>
+   
+    <th:block th:insert="index::script">
+    		
+	</body>
+</html>
